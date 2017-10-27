@@ -1,0 +1,28 @@
+<!--<input type="text" name="search" placeholder="Search..">-->
+<!--<div>
+<form action="/polls/models/project" method="get">
+<input type="text" name="query" id="query" size="40" value="">
+<input type="submit" value="Search">
+<input type="hidden" name="search" value="1">
+</form>
+</div>-->
+
+
+<!--<form method="get" action=" ">
+    <input type="text" name="q" placeholder="Search..." value=" ">
+    <input type="submit" value="Search">
+</form>-->
+<form type="get" action=" " >
+<input  id="search_box" type="text" name="q"  placeholder="Search..." >
+<button id="search_submit" type="submit" >Submit</button>
+</form>
+
+{% if latest_project_list %}
+    <ul>
+    {% for projects in latest_project_list %}
+        <li>{{ projects.id }}{{ projects.project_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

@@ -1,0 +1,10 @@
+
+{% if latest_employee_list %}
+    <ul>
+    {% for employee in latest_employee_list %}
+        <li>{{ employee.id }}{{ employee.first_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
